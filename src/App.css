@@ -1,0 +1,408 @@
+/* src/App.css */
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: #252525;
+  color: white;
+  margin-bottom: 20px;
+}
+
+nav {
+  background-color: #2c2c2c;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items:baseline;
+}
+
+nav h3{
+color: white;
+}
+nav a {
+  color: rgb(194, 194, 194);
+  text-decoration: none;
+  padding: 8px 16px;
+  
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+nav form {
+  display: flex;
+}
+
+nav input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+nav button {
+  padding: 8px;
+  margin-left: 10px;
+  border: none;
+  background-color: #7c7b7b;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Movie list styling */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.movie img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.movie img:hover {
+  transform: scale(1.05);
+}
+
+/* Movie details */
+.movie {
+  text-align: center;
+  background-color: #363636;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+div h1{
+  margin-left: 25px;
+}
+
+.movie h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: white;
+}
+
+.movie p {
+  font-size: 1rem;
+  color: #76b3ec;
+  margin-top: 5px;
+}
+
+.movie p span {
+  color: #ffffff;
+  font-weight: bold;
+}
+div button{
+  margin: 5px;
+  color: white;
+  padding: 10px;
+  background-color:rgb(115, 184, 241);
+  border-radius: 8px;
+  width:80px;
+  border: none;
+  margin-left: 20px;
+}
+button:hover{
+  cursor: pointer;
+}
+/* src/pages/MovieDetails.css */
+
+/* Container for movie details */
+.movie-details-container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: #525151; /* Black background for entire section */
+  color: white; /* White text for contrast */
+}
+
+/* Flex container for poster and details */
+.movie-main-info {
+  display: flex; /* Flex layout to align the poster and details horizontally */
+  justify-content: space-between; /* Space between the two elements */
+  gap:30px; /* Space between the poster and details */
+  align-items: flex-start; /* Align items at the top */
+  background-color: rgba(32, 32, 32, 0.8); /* Semi-transparent black background for blending */
+  padding: 25px;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Movie info section on the left */
+.movie-info {
+  flex: 1; /* Take up remaining space */
+  padding-right: 20px; /* Space on the right for visual balance */
+}
+
+.movie-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.movie-info p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  color: #e7e5e5; /* Light gray text for better readability */
+}
+ #rating{
+  color: rgb(117, 164, 235);
+  font-size: 1.5rem;
+}
+
+/* Movie poster on the right */
+.movie-poster img {
+  max-width: 350px;
+  max-height: 380px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Dark shadow to blend with the black background */
+  transition: transform 0.3s ease;
+}
+
+.movie-poster img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Cast section */
+.cast-list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px; /* Space above the cast section */
+}
+
+/* Cast member styling */
+.cast-member {
+  text-align: center;
+  width: 120px;
+}
+
+.cast-member img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.cast-member p {
+  font-size: 1rem;
+  color: #f5f5f5;
+}
+
+/* src/styles.css (Global CSS file for all pages) */
+
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: white;
+}
+
+/* Container for movie details */
+.movie-details-container {
+  padding: 20px;
+  color: white;
+}
+
+/* Flexbox for movie poster and details */
+.movie-main-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.movie-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+/* Movie poster */
+.movie-poster img {
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.movie-poster img:hover {
+  transform: scale(1.05);
+}
+
+/* Cast Styling */
+.cast-list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cast-member {
+  text-align: center;
+  width: 120px;
+}
+
+.cast-member img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Default mobile styles */
+@media (max-width: 767px) {
+  /* Movie Details Page: Stack movie details and poster vertically */
+  .movie-main-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-poster img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .movie-info {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  /* Cast: Smaller image sizes on mobile */
+  .cast-member {
+    width: 80px;
+  }
+}
+
+/* Tablet: Adjust layouts for larger screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .movie-main-info {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .movie-poster img {
+    max-width: 250px;
+  }
+
+ 
+
+  .cast-member {
+    width: 100px;
+  }
+}
+
+/* Larger screens (desktops) */
+@media (min-width: 1024px) {
+  .movie-main-info {
+    flex-direction: row;
+  }
+
+  .movie-poster img {
+    max-width: 350px;
+  }
+
+  /* Larger cast member images */
+  .cast-member {
+    width: 120px;
+  }
+}
+/* Movie List Grid */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie {
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.movie img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.movie img:hover {
+  transform: scale(1.05);
+}
+/* src/styles.css */
+
+/* Responsive Movie List for Tablets and Desktops */
+@media (max-width: 767px) {
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+/* src/Navbar.css */
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+nav form {
+  display: flex;
+  align-items: center;
+}
+
+nav input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+/* Responsive Navbar */
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin-bottom: 10px;
+  }
+
+  nav form {
+    flex-direction: column;
+  }
+
+  nav input {
+    margin-bottom: 10px;
+  }
+}
